@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
 export default function RandomJoke() {
   const [joke, setJoke] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetchJoke();
+  }, []);
 
   async function fetchJoke() {
     setLoading(true);
