@@ -37,9 +37,8 @@ export default function RandomJoke() {
 
       {joke && (
         <>
-          <h2>Type: {joke.type}</h2>
-          <p>Setup: {joke.setup}</p>
-          <p>Punchline: {joke.punchline}</p>
+          <h2>{joke.setup}</h2>
+          <p>{joke.punchline}</p>
         </>
       )}
     </div>
